@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/activity_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="20-Apr-2020"
+        />
+    <TextView
+        android:id="@+id/activity_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/activity_date_tv"
+        app:layout_constraintTop_toBottomOf="@id/activity_date_tv"
+        android:text="01:22 PM"
+        />
+    <ImageView
+        android:id="@+id/activity_pointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pointer"
+        app:layout_constraintStart_toEndOf="@id/activity_time_tv"
+        app:layout_constraintTop_toBottomOf="@id/activity_date_tv"
+        app:layout_constraintBottom_toBottomOf="@id/activity_time_tv"
+        android:layout_marginStart="10dp"
+        android:contentDescription="Ye kya hai bhai" />
+    <TextView
+        android:id="@+id/activity_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/activity_pointer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/activity_pointer"
+        app:layout_constraintBottom_toBottomOf="@id/activity_pointer"
+        android:layout_marginStart="20dp"
+        android:text="Shipment - 11111111 has been completed because"
+        android:background="@color/gray"
+        android:padding="2dp"
+        />
+    <View
+        android:layout_width="2dp"
+        android:layout_height="50dp"
+        android:background="#000"
+        app:layout_constraintBottom_toTopOf="@id/activity_pointer"
+        app:layout_constraintStart_toStartOf="@id/activity_pointer"
+        app:layout_constraintEnd_toEndOf="@id/activity_pointer"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
